@@ -49,6 +49,7 @@
             </div>
           </nav>
     </header>
+
     <main class="w-10/12 mx-auto text-center">
         <!-- Hero Section -->
         <Section id="hero-section">
@@ -67,19 +68,27 @@
             <h1 class="lato-black text-5xl py-4">Adopt Your Best Friend</h1>
             <p class="lato-regular text-2xl text-gray-700 py-4">"Adopt a loyal companion and experience the unconditional love and joy that only a best friend can bring. Give a furry friend a forever home and create memories that last a lifetime."
             </p>
-            <div id="pet-categories" class="flex flex-col md:flex-row justify-center items-center gap-6 mb-4"></div>
+            <div id="pet-categories" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center mb-4"></div>
          </section>
 
          <!-- Deal Section -->
           <section id="deal-container">
             <h2 class="lato-bold text-2xl my-5 text-left">Best Deals For You</h2>
+            <div id="pet-container">
+                <div id="pet-cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                </div>
+                <div id="pet-photo-container">
+                    <div class="grid grid-cols-2"></div>
+                </div>
+            </div>
           </section>
     </main>
-    <footer class="bg-gray-900">
-        <div id="footer-container" class="flex justify-between text-white w-10/12 mx-auto py-24">
+
+    <footer class="bg-gray-900 w-full">
+        <div id="footer-container" class="flex flex-col-reverse md:flex-row items-center justify-between text-white w-10/12 mx-auto py-24">
             <div>
-                <div class="text-2xl flex gap-2 lato-black"><img class="w-[28px]" src="assets/images/logo.webp" alt="logo"> Peddy</div>
-            <ul class="mt-10 lato-regular">
+                <div class="text-2xl flex gap-2 justify-center md:justify-normal lato-black"><img class="w-[28px]" src="assets/images/logo.webp" alt="logo"> Peddy</div>
+            <ul class="my-10 lato-regular">
                 <li class="py-2">Location: av. Washingtonn 165, NY CA</li>
                 <li class="py-2">54003</li>
                 <li class="py-2">Phone: +31 85 964 47 25</li>
@@ -88,9 +97,9 @@
                 <li class="py-2"><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-x-twitter"></i> <i class="fa-brands fa-youtube"></i> <i class="fa-brands fa-instagram"></i></li>
             </ul>
             </div>
-            <div>
+            <div class="my-10">
                 <h2 class="text-2xl lato-bold">Useful Links</h2>
-                <ul class="mt-10 lato-regular text-gray-300">
+                <ul class="lato-regular text-gray-300">
                     <li class="py-2"><a href="index.html">Home</a></li>
                     <li class="py-2"><a href="#about">About Us</a></li>
                     <li class="py-2"><a href="#animals">Animals</a></li>
