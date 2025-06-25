@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/style.css">
 
@@ -15,31 +20,41 @@
 </head>
 <body class="w-10/12 mx-auto text-center">
     <header>
-        <nav class="py-14">
-            <ul class="flex justify-between items-center">
-                <!-- Logo Section -->
-                <li><div class="logo-container flex space-x-2">
-                    <img src="assets/images/logo.webp" alt="">
-                    <h2 class="font-bold text-xl"> Peddy</h2>
-                </div></li>
-                <!-- Navigation Links -->
-                <li>
-                    <div class="section-nav-container flex space-x-4 mr-22">
-                        <h3><a href="index.html">Home</a></h3>
-                        <h3><a href="#shop">Shop</a></h3>
-                        <h3><a href="#contact">Contact</a></h3>
-                    </div>
+        <nav class="navbar bg-base-100 py-14">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#shop">Shop</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-xl"><img src="assets/images/logo.webp" alt="logo"> Peddy</a>
+            </div>
+            <div class="navbar-center lato-regular hidden lg:flex">
+              <ul class="menu text-gray-600 menu-horizontal px-1">
+                <li><a href="#index.html">Home</a></li>
+                <li><a href="#shop">Shop</a>
                 </li>
-                <li><a href="#account"><i class="fa-regular fa-user text-xl bg-gray-50 rounded-full p-4"></i></a></li>
-            </ul>
-        </nav>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a href="#account"><i class="fa-regular fa-user bg-gray-50 rounded-full p-4"></i></a>
+            </div>
+          </nav>
     </header>
     <main>
         <!-- Hero Section -->
         <Section id="hero-section">
-            <h3 class="font-bold text-gray-500 text-2xl">Bringing Families Together <span>🔥</span></h3>
-            <h1 class="font-black text-7xl py-4">Your Path to Adoption <br> Starts Here</h1>
-            <p class="text-2xl text-gray-700 py-4">Embark on a compassionate journey with us, where your path to adoption begins with trusted guidance, support, and care every step of the way.
+            <h3 class="lato-bold text-gray-500 text-2xl">Bringing Families Together <span>🔥</span></h3>
+            <h1 class="lato-black text-7xl py-4">Your Path to Adoption <br> Starts Here</h1>
+            <p class="lato-regular text-2xl text-gray-700 py-4">Embark on a compassionate journey with us, where your path to adoption begins with trusted guidance, support, and care every step of the way.
             </p>
             <div class="btn custom-btn border-none">View More</div>
             <div class="image-container flex justify-center my-12">
@@ -48,8 +63,8 @@
         </Section>
         <!-- Adoption Section -->
          <section id="adoption-section">
-            <h1 class="font-black text-5xl py-4">Adopt Your Best Friend</h1>
-            <p class="text-2xl text-gray-700 py-4">"Adopt a loyal companion and experience the unconditional love and joy that only a best friend can bring. Give a furry friend a forever home and create memories that last a lifetime."
+            <h1 class="lato-black text-5xl py-4">Adopt Your Best Friend</h1>
+            <p class="lato-regular text-2xl text-gray-700 py-4">"Adopt a loyal companion and experience the unconditional love and joy that only a best friend can bring. Give a furry friend a forever home and create memories that last a lifetime."
             </p>
          </section>
     </main>
