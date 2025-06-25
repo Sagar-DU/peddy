@@ -39,10 +39,11 @@ const displayPets = (pets) => {
         const card = document.createElement("div");
         card.classList = "card bg-base-100 shadow-sm"
         card.innerHTML = `
-        <figure>
+        <figure class ="h-[400px]">
     <img
       src=${pet.image}
-      alt=${pet.cetagory} />
+      alt=${pet.cetagory}
+      class ="h-full w-full object-cover" />
   </figure>
   <div class="card-body">
     <h2 class="card-title">
