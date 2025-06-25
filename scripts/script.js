@@ -1,39 +1,37 @@
 console.log("Started working with API");
-// Tasks
-// 1. Fetch All Pets 
-/* 
-Endpoint: https://openapi.programming-hero.com/api/peddy/pets
-Description: Retrieves a list of all available pets for adoption. The data includes details like pet name, type, age, and adoption status.
-*/
 
-// Create a Load Pets
-const loadPets = () => {
-    fetch("https://openapi.programming-hero.com/api/peddy/pets")
+// Load all the pet categories
+const loadPetCategories = () => {
+    fetch ("https://openapi.programming-hero.com/api/peddy/categories")
     .then ((res) => res.json())
-    .then ((dat) => displayPets(dat.pets))
+    .then ((dat) => displayPetCateogries(dat.categories))
+
     .catch((err) => console.log(err));
-};
-
-// Create a Display Pets Function 
-const displayPets = (pets) => {
-    const listOfAllPetsData = pets;
-    console.log (listOfAllPetsData);
-
-    // Showing all the individual data 
-    // pets.forEach((pet) => {
-    //     console.log(pet);
-    // });
 }
 
-// Call Load Pet Fuction 
-loadPets();
+// Create a display pet categories function 
+const displayPetCateogries = (categories) => {
+    const petCateogryContainer = document.getElementById("pet-categories");
+    // console.log(categories);
+    categories.forEach((category) => {
+        console.log(category);
+        const button = document.createElement("button");
+        button.classList = "btn btn-wide h-22 bg-white rounded-2xl lato-bold text-2xl";
+        button.innerHTML = `<img src="${category.category_icon}" alt="category_icon"> ${category.category}`;
+        petCateogryContainer.append(button);
+    });
+}
 
 /*
-Fetch Pet Details by ID
-
-Endpoint:https://openapi.programming-hero.com/api/peddy/pet/pet-id
-
-Example: https://openapi.programming-hero.com/api/peddy/pet/1
-
-Description: Fetches detailed information for a specific pet based on its ID. This can be used to view additional information about the pet such as vacination history, description
+Output
+category
+: 
+"Cat"
+category_icon
+: 
+"https://i.ibb.co.com/N7dM2K1/cat.png"
+id
+: 
+1
 */
+loadPetCategories();
