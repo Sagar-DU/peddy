@@ -1,3 +1,17 @@
-.primary-btn-color {
-    background-color: rgb(14, 122, 129);
-}
+/* Custom Button Styling */
+.custom-btn {
+    background-color: rgb(14, 122, 129); /* Your custom primary color */
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.4s ease, background-color 0.4s ease; /* Slower transition */
+  }
+  
+  /* Hover Effect - Grow and Background Change */
+  .custom-btn:hover {
+    transform: scale(1.1); /* Grow the button on hover */
+    background-color: rgba(14, 122, 129, 0.8); /* Slight opacity change on hover */
+  }
+  
