@@ -48,13 +48,10 @@ vaccinated_status: "Fully"
 // Display pets 
 const displayPets = (pets) => {
     const allPetData = document.getElementById("pet-cards");
-    const petPhoto = document.getElementById("pet-photo-container")
     pets.forEach((pet) => {
         console.log(pet);
         const card = document.createElement("div");
-        const pictureCard = document.createElement("div");
-        card.classList = "card bg-base-100 p-6 shadow-sm"
-        pictureCard.classList = "card bg-base-100 p-6 shadow-sm grid grid-cols-2"
+        card.classList = "card bg-base-100 p-6 shadow-sm";
         card.innerHTML = `
         <figure class ="h-[400px]">
     <img
@@ -78,12 +75,7 @@ const displayPets = (pets) => {
       <div class="btn custom-btn badge-outline">Details</div>
   </div>
         `;
-        pictureCard.innerHTML = `
-        <figure class="h-[200px]>
-        <img src=${pet.image}" />
-        `;
         allPetData.append(card);
-        petPhoto.append(pictureCard);
     });
 }
 /*
